@@ -1,3 +1,9 @@
+# Libri2Mix-VAE-BSS
+
+This is unofficial implementation of VAE-BSS in libri2Mix Dataset.  
+major codes are from the official github. Thanks for great work to author, J. Neri.  
+
+
 # VAE-BSS
   
 A PyTorch model of the variational auto-encoder for unsupervised blind source separation, with training and evaluation programs, as described in
