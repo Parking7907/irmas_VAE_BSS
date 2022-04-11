@@ -118,9 +118,9 @@ class IRMAS(Dataset):
         #print(data.shape, source_1.shape, source_2.shape)
 
         #Output size 문제 때문에....
-        data = data[:self.data_size, :self.data_len]
-        source_1 = source_1[:self.data_size, :self.data_len]
-        source_2 = source_2[:self.data_size, :self.data_len]
+        data = data[:self.data_size, :]
+        source_1 = source_1[:self.data_size, :]
+        source_2 = source_2[:self.data_size, :]
 
         #print(data.shape, source_1.shape, source_2.shape)
         data = torch.Tensor(data)
@@ -147,7 +147,7 @@ class IRMAS(Dataset):
         source_1 = self.normalize(source_1)
         source_2 = self.normalize(source_2)
         source_out = self.normalize(data)
-        #print(source_out.shape, source_1.shape, source_2.shape)
+        print(start, source_out.shape, source_1.shape, source_2.shape)
         #print(torch.max(source_1), torch.max(source_2), torch.max(source_out), torch.min(source_1), torch.min(source_2), torch.min(source_out))
 
         return source_1, source_2, source_out
